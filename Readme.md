@@ -1,6 +1,6 @@
 # 🚀 RushWord – A Timed Word Guessing Game
 
-**RushWord** is a fast-paced twist on the classic Wordle game, designed to test your vocabulary **under pressure**.  
+**RushWord** is a fast-paced twist on the classic hi game, designed to test your vocabulary **under pressure**.  
 Can you guess the 5-letter word before your points run out?
 
 ---
