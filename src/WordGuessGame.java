@@ -22,8 +22,23 @@ public class WordGuessGame {
             if (word.charAt(i) == this.chosenWord.charAt(i)) {
                 result.add("green");
             } else {
-                result.add("red");
+//                result.add("red");
+                char wordChar = word.charAt(i);
+                boolean isItYellow = false;
+                for(int j = 0; j < 5; j++){
+                    if(wordChar == chosenWord.charAt(j)){
+                        isItYellow = true;
+                        break;
+                    }
+                }
+
+                if(isItYellow){
+                    result.add("yellow");
+                }else{
+                    result.add("red");
+                }
             }
+
         }
 
         return result;
