@@ -27,7 +27,8 @@ public class Wordle {
 
                 List<String> result = myGame.userGuess(userGuess);
                 System.out.println(result);
-                 if (!result.contains("red")) {
+                 if (!result.contains("red") && !result.contains("yellow"))
+                 {
                      System.out.println("Correct");
                      break;
                  } else {
