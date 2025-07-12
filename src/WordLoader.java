@@ -2,10 +2,10 @@ import java.io.*;
 import java.util.*;
 
 public class WordLoader {
-    public static List<String> loadWordsFromFile(String filePath) {
+    public static List<String> loadWordsFromFile(String fileName) {
         List<String> words = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\itsab\\OneDrive\\Desktop\\RushWord-backend\\src\\dictionary.txt"))
+        try (BufferedReader reader = new BufferedReader(new FileReader("src\\dictionaries\\"+fileName))
         ) {
             String line;
             while ((line = reader.readLine()) != null) {

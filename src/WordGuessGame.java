@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class WordGuessGame {
@@ -9,7 +11,21 @@ public class WordGuessGame {
         this.chosenWord = words[randomIndex];
     }
 
-    public boolean userGuess(String word) {
-        return word.equalsIgnoreCase(this.chosenWord);
+    public List<String> userGuess(String word) {
+        if (word.length() != 5) {
+            throw new IllegalArgumentException("Input must be exactly 5 letters");
+        }
+
+        List<String> result = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            if (word.charAt(i) == this.chosenWord.charAt(i)) {
+                result.add("green");
+            } else {
+                result.add("red");
+            }
+        }
+
+        return result;
     }
 }
